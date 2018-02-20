@@ -1,0 +1,13 @@
+To run the code you need following things installed :
+- Node js ( Latest version preferred - Download LTS version from https://nodejs.org/en/ )
+- nodemon ( run "npm install -g nodemon" command to install it once you have node )
+
+How to run :
+1. Open command prompt and navigate to the folder in which these files are
+2. run following command > nodemon demo.js
+
+Result : 
+demo.js will be run by the node and result ( console logs ) will be visible. 
+Also the code will create a new file "written.json" in the same directory and will update its content every time task restarts.
+While the command is running you can make changes in demo.js and it will reflect in command as soon as you save the file.
+Press "Ctrl + c" to stop the running nodemon command.
