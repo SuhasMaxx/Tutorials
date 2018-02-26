@@ -2,7 +2,7 @@ Node based chat app [ No database, works on local json file ]
 
 To run the code you need following things installed :
 - Node js ( Latest version preferred - Download LTS version from https://nodejs.org/en/ )
-- nodemon ( run "npm install -g nodemon" command to install it once you have node )
+- Run command 'npm install' if it's your first time running the app [ package.json includes all libraries needed ]
 
 How to run :
 1. Open command prompt and navigate to the folder in which these files are
