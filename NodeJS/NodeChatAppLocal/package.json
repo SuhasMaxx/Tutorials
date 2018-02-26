@@ -1,0 +1,17 @@
+{
+  "name": "chatnode",
+  "version": "1.0.0",
+  "description": "Simple chat app based on node js",
+  "main": "server.js",
+  "scripts": {
+    "test": "isfine",
+    "start": "node server.js"
+  },
+  "author": "Suhas Sanmukh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
+}
