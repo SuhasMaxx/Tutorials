@@ -31,6 +31,8 @@ eTicketModule.loadTheatres = function (movieName, movieDate) {
 
 
 eTicketModule.loadUserForm = function (theatreName, showTime) {
+    eTicketModule.currentSelection.theatre = theatreName;
+    eTicketModule.currentSelection.show = showTime;
     eTicketModule.checkUserData();
     eTicketModule.renderUserForm();
 }
