@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="scripts/loader.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/data.js"></script>
+    <script type="text/javascript" src="scripts/renderer.js"></script>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+</head>
+<body class="main-theme">
+    <h1>Eticket</h1>
+    <div id="appViewer" class="application-viewer">
+        <label id="city-details-line">Showing movies for: <span class="city-name"></span></label>
+        <div class="movie-list-viewer"></div>
+        <div class="movie-showtime-viewer"></div>
+        <div class="error-div"></div>
+        <div class="user-data-form-container">
+            <form class="user-data-form">
+                First name:&nbsp;&nbsp;
+                <input type="text" name="firstname" class="first-name" placeholder="first name"><br />
+                Last name:&nbsp;&nbsp;
+                <input type="text" name="lastname" class="last-name" placeholder="last name"><br />
+                Email:&nbsp;&nbsp;
+                <input type="email" name="email" class="user-email" placeholder="something@something.com"><br />
+                Mobile number:&nbsp;&nbsp;
+                <input type="text" class="user-mobile"><br />
+                No of Tickets:&nbsp;&nbsp;
+                <input type="number" class="user-tickets" min="1" max="5"><br />
+                <br>
+                <input type="button" id="user-data-button" value="Submit">
+            </form> 
+        </div>
+        <div class="confirmation-reciept">
+            
+        </div>
+    </div>
+</body>
+</html>
