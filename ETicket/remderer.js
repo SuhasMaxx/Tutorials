@@ -69,8 +69,14 @@ eTicketModule.renderShowTimes = function (theatreData) {
     }
 }
 
-eTicketModule.renderConfirmation = function (cityData) {
+eTicketModule.renderConfirmation = function () {
+    
+    eTicketModule.UIEements.sections.confirmReciept.innerHTML = "Hi, You have selected movie in theatre :" + eTicketModule.currentSelection.theatre + " and showtime : " + eTicketModule.currentSelection.show;
+
     eTicketModule.showSection('confirm');
+
+        //eTicketModule.currentSelection.theatre = theatreName;
+    //eTicketModule.currentSelection.show = showTime;
 }
 
 eTicketModule.initiateUIElements = function () {
@@ -93,9 +99,9 @@ eTicketModule.initiateUIElements = function () {
     };
 
     document.getElementById('user-data-button').onclick = function () {
-        debugger;
+        //debugger;
         if (eTicketModule.validateUserForm()) {
-            eTicketModule.renderConfirmation;
+            eTicketModule.renderConfirmation();
         }
     };
 }
