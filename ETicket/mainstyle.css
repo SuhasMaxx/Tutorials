@@ -50,6 +50,7 @@ hr{
 
 .user-data-form-container{
     margin-top:25px;
+    text-align: center;
 }
 
 .user-data-form{
@@ -62,9 +63,11 @@ form input{
 }
 
 .error-div{
+    margin-top: 20px;
+    padding: 10px;
     color: #721c24;
     background-color: #f8d7da;
-    border-color: #f5c6cb;
+    border: 2px solid #f5c6cb;
 }
 
 .confirmation-reciept{
@@ -73,4 +76,9 @@ form input{
     font-size: 25px;
     padding: 25px;
     border: 2px dotted #ffFF00;
+}
+
+.user-form-label{
+    display: inline-block;
+    width: 130px;
 }
