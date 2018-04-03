@@ -23,6 +23,8 @@ eTicketModule.loadCity = function () {
 }
 
 eTicketModule.loadTheatres = function (movieName, movieDate) {
+    eTicketModule.currentSelection.movieName = movieName;
+    eTicketModule.currentSelection.movieDate = movieDate;
     eTicketModule.getTheatreData(movieName, movieDate);
     if (eTicketModule.data.theatres.length) {
         eTicketModule.renderShowTimes(eTicketModule.data.theatres);
