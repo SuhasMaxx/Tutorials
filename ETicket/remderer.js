@@ -116,17 +116,19 @@ eTicketModule.validateUserForm = function () {
     if (!(eTicketModule.UIEements.userFormElements.fName.value && eTicketModule.UIEements.userFormElements.fName.value.trim() !== "")) {
         errors.push('Invalid last name');
     }
-    if ((!eTicketModule.UIEements.userFormElements.email.value && eTicketModule.utilities.validateEmail(eTicketModule.UIEements.userFormElements.email.value))) {
+    if (!(eTicketModule.UIEements.userFormElements.email.value && eTicketModule.utilities.validateEmail(eTicketModule.UIEements.userFormElements.email.value))) {
         errors.push('Invalid email');
     }
-    if ((!eTicketModule.UIEements.userFormElements.mobile.value && eTicketModule.utilities.validatePhoneNumber(eTicketModule.UIEements.userFormElements.mobile.value))) {
+    if (!(eTicketModule.UIEements.userFormElements.mobile.value && eTicketModule.utilities.validatePhoneNumber(eTicketModule.UIEements.userFormElements.mobile.value))) {
         errors.push('Invalid phone');
     }
     if (!(eTicketModule.UIEements.userFormElements.ntickets.value && (Number(eTicketModule.UIEements.userFormElements.ntickets.value) > 0 && Number(eTicketModule.UIEements.userFormElements.ntickets.value) < 10))) {
         errors.push('Invalid ticket number');
     }
+    //debugger;
     if (errors.length) {
         eTicketModule.UIEements.sections.errorSection.innerHTML = errors;
+        eTicketModule.UIEements.sections.errorSection.style.display = "block";
         return false;
     }
     return true;
