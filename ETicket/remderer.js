@@ -57,7 +57,6 @@ eTicketModule.renderShowTimes = function (theatreData) {
     }
     movContent += '</div>';
     document.getElementsByClassName("movie-showtime-viewer")[0].innerHTML = movContent;
-    //document.getElementsByClassName("city-name")[0].innerHTML = cityData.name;
 
     //----- Show Section
     eTicketModule.showSection('movie-time');
@@ -71,7 +70,7 @@ eTicketModule.renderShowTimes = function (theatreData) {
 
 eTicketModule.renderConfirmation = function () {
     
-    eTicketModule.UIEements.sections.confirmReciept.innerHTML = "Hi, You have selected movie in theatre :" + eTicketModule.currentSelection.theatre + " and showtime : " + eTicketModule.currentSelection.show;
+    eTicketModule.UIEements.sections.confirmReciept.innerHTML = "Hi " + eTicketModule.currentSelection.userName + ",<br><br> You have selected " + eTicketModule.currentSelection.noOfTickets + " tickets to the movie \"" + eTicketModule.currentSelection.movieName + "\" in theatre :" + eTicketModule.currentSelection.theatre + " on " + eTicketModule.currentSelection.movieDate + " and show timing is : " + eTicketModule.currentSelection.show;
 
     eTicketModule.showSection('confirm');
 
@@ -113,7 +112,7 @@ eTicketModule.validateUserForm = function () {
     if (!(eTicketModule.UIEements.userFormElements.fName.value && eTicketModule.UIEements.userFormElements.fName.value.trim() !== "")) {
         errors.push('Invalid first name');
     }
-    if (!(eTicketModule.UIEements.userFormElements.fName.value && eTicketModule.UIEements.userFormElements.fName.value.trim() !== "")) {
+    if (!(eTicketModule.UIEements.userFormElements.lName.value && eTicketModule.UIEements.userFormElements.lName.value.trim() !== "")) {
         errors.push('Invalid last name');
     }
     if (!(eTicketModule.UIEements.userFormElements.email.value && eTicketModule.utilities.validateEmail(eTicketModule.UIEements.userFormElements.email.value))) {
@@ -131,6 +130,8 @@ eTicketModule.validateUserForm = function () {
         eTicketModule.UIEements.sections.errorSection.style.display = "block";
         return false;
     }
+    eTicketModule.currentSelection.userName = eTicketModule.UIEements.userFormElements.fName.value + " " + eTicketModule.UIEements.userFormElements.lName.value;
+    eTicketModule.currentSelection.noOfTickets = eTicketModule.UIEements.userFormElements.ntickets.value;
     return true;
 }
 
@@ -156,7 +157,7 @@ eTicketModule.showSection = function (sectionName) {
             sections.movieShowtimeViewer.style.display = "none";
             sections.userDataForm.style.display = "none";
             sections.confirmReciept.style.display = "none";
-            sections.confirmReciept.errorSection = "none";
+            sections.errorSection.style.display = "none";
             break;
         case "movie-time":
             sections.cityNameLine.style.display = "block";
@@ -164,7 +165,7 @@ eTicketModule.showSection = function (sectionName) {
             sections.movieShowtimeViewer.style.display = "block";
             sections.userDataForm.style.display = "none";
             sections.confirmReciept.style.display = "none";
-            sections.confirmReciept.errorSection = "none";
+            sections.errorSection.style.display = "none";
             break;
         case "user-data":
             sections.cityNameLine.style.display = "block";
@@ -172,7 +173,7 @@ eTicketModule.showSection = function (sectionName) {
             sections.movieShowtimeViewer.style.display = "none";
             sections.userDataForm.style.display = "block";
             sections.confirmReciept.style.display = "none";
-            sections.confirmReciept.errorSection = "none";
+            sections.errorSection.style.display = "none";
             break;
         case "confirm":
             sections.cityNameLine.style.display = "none";
@@ -180,7 +181,7 @@ eTicketModule.showSection = function (sectionName) {
             sections.movieShowtimeViewer.style.display = "none";
             sections.userDataForm.style.display = "none";
             sections.confirmReciept.style.display = "block";
-            sections.confirmReciept.errorSection = "none";
+            sections.errorSection.style.display = "none";
             break;
         default:
             sections.cityNameLine.style.display = "block";
@@ -188,7 +189,7 @@ eTicketModule.showSection = function (sectionName) {
             sections.movieShowtimeViewer.style.display = "none";
             sections.userDataForm.style.display = "none";
             sections.confirmReciept.style.display = "none";
-            sections.confirmReciept.errorSection = "none";
+            sections.errorSection.style.display = "none";
             break;
 
     }
