@@ -5,7 +5,17 @@ body {
 h1{
     width: 100%;
     text-align: center;
-    background-color: cadetblue;
+    background-color: #333738;
+    padding: 5px;
+    color: #a1bad0;
+}
+
+h4{
+    color: #385607;
+}
+
+#city-details-line{
+    font-size: 18px;
 }
 
 #appViewer{
@@ -19,27 +29,29 @@ h1{
 
 .movie-block{
     display: inline-block;
-    border: 2px dashed #999999;
+    border: 2px dashed #4e4d4d;
     margin: 10px;
-    color: #d43f3a;
-    padding: 25px;
+    color: #ffffff;
+    padding: 20px;
     cursor: pointer;
+    font-size: 18px;
+    background-color: #8c8a8a;
 }
 
 .city-name{
     color: brown;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .movie-time-block{
     display: inline-block;
-    border: 2px solid #cccccc;
-    margin: 10px;
+    border: 2px solid #008087;
+    margin: 15px;
     color: green;
     font-weight: bold;
-    padding: 25px;
-    background-color: white;
+    padding: 20px;
+    background-color: #edfff7;
     cursor: pointer;
 }
 
