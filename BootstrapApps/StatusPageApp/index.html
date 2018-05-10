@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style type="text/css">
+    	td {
+    		border: 2px solid #cccccc;
+    	}
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="js/script.js"></script>
+	  <script type="text/javascript">
+	  	
+	  	/*function addTd(){
+	  		$("#dyntr").append('<td>new</td>');
+	  		$("#dyntr2").append('<td><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></td>');
+	  	}*/
+
+	  	
+	  	
+
+	  </script>
+  </head>
+  <body>
+  	<img src="Logo.png" class="app-logo"/>
+  	 <h1>
+  	 	Migration Jobs Status 
+  	 	<span class="glyphicon glyphicon-refresh page-refresh-btn" onclick="refreshPage();" title="Refresh page" aria-hidden="true"></span>
+  	 </h1>
+  	 <!-- <div class="input-group">
+	  <h1>XL Deploy Migration Status </h1>
+	  <span class="glyphicon glyphicon-refresh input-group-addon" onclick="refreshPage();" title="Refresh page" aria-hidden="true"></span>
+	</div> -->
+  	 <div class="jobs-container"></div>
+  	<!--<button class="collapsible btn btn-primary">HAA - Bankmail</button>
+  	<div class="content">
+  		<div class="single-block-progress">
+
+		    <table width="100%" style=" border: 2px solid #cccccc; text-align: center;">
+		    	<tbody>
+		    		<tr class="header-status">
+		    			<td>Fetch</td>
+		    			<td>Build</td>
+		    			<td>Unit Test</td>
+		    			<td>Functional Tests</td>
+		    			<td>Deploy</td>
+		    			<td>Status</td>
+		    		</tr>
+		    		<tr class="value-status">
+		    			<td><div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></td>
+		    			<td><div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></td>
+		    			<td><div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></td>
+		    			<td><div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></td>
+		    			<td><div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></td>
+		    			<td class="status status-complete" title="Completed!"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+		    		</tr>
+		    	</tbody>
+		    </table>
+	    </div>
+  	</div>
+  	<button class="collapsible btn btn-primary">HAB - Generics  </button>
+  	<div class="content">
+  		<div class="single-block-progress">
+
+		    <table width="100%" style=" border: 2px solid #cccccc; text-align: center;">
+		    	<tbody>
+		    		<tr class="header-status">
+		    			<td>Fetch</td>
+		    			<td>Build</td>
+		    			<td>Unit Test</td>
+		    			<td>Functional Tests</td>
+		    			<td>Deploy</td>
+		    			<td>Status</td>
+		    		</tr>
+		    		<tr class="value-status">
+		    			<td><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></td>
+		    			<td><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div></td>
+		    			<td></td>
+		    			<td></td>
+		    			<td></td>
+		    			<td class="status status-running" title="In progress"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></td>
+		    		</tr>
+		    	</tbody>
+		    </table>
+	    </div>
+  	</div>
+  	<button class="collapsible btn btn-primary">HAC - Tooling</button>
+  	<div class="content">
+  		<div class="single-block-progress">
+
+		    <table width="100%" style=" border: 2px solid #cccccc; text-align: center;">
+		    	<tbody>
+		    		<tr class="header-status">
+		    			<td>Fetch</td>
+		    			<td>Build</td>
+		    			<td>Unit Test</td>
+		    			<td>Functional Tests</td>
+		    			<td>Deploy</td>
+		    			<td>Status</td>
+		    		</tr>
+		    		<tr class="value-status">
+		    			<td></td>
+		    			<td></td>
+		    			<td></td>
+		    			<td></td>
+		    			<td></td>
+		    			<td class="status status-waiting" title="Waiting (not started)"><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span></td>
+		    		</tr>
+		    	</tbody>
+		    </table>
+	    </div>
+  	</div> -->
+
+  	
+
+    
+
+    
+    
+
+	<!-- <div class="progress" style="height: 50px;">
+    	<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">40%</div>
+	</div> -->
+
+	<!-- <button type="button" class="btn btn-primary" onclick="addTd();">Add cell</button> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+  <footer class="page-footer">© Maxx Studio</footer>
+</html>
