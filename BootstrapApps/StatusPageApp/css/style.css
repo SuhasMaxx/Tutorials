@@ -1,0 +1,115 @@
+.collapsible {
+    background-color: #009286;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #004C4C;
+    
+}
+.collapsible
+{
+    border-style: solid;
+    border-width: thin;
+}
+
+.content {
+    padding: 0 0px;
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+h1
+{
+    color: #005E5D;
+    text-align: center;
+}
+img
+{
+    width: 100%;
+}
+p
+{
+    
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #333333;
+}
+
+.app-logo{
+    float: left;
+    width: 175px;
+    height: 80px;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: -15px;
+}
+
+.page-refresh-btn {
+    font-size: 30px;
+    float:right;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.single-block-progress{
+    padding: 20px;
+    /*margin-bottom: 20px;*/
+}
+
+.status-waiting{
+    background-color: #c9302c;
+    color: #ffffff;
+}
+.status-running{
+    background-color: #F2B968;
+}
+.status-complete{
+    background-color: #518DC1;
+    color: #ffffff;
+}
+
+.value-status{
+    height: 50px;
+}
+
+.value-status .progress-bar{
+    height: 50px;
+    vertical-align: center;
+}
+
+.status .glyphicon {
+    font-size: 15px;
+}
+
+.collapsible{
+    margin: 2px 0px;
+}
+
+.not-active{
+    background-color: #DDDDDD;
+}
+
+.jobs-container{
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.page-footer{
+    position:fixed;
+    bottom:0;
+    right:0;
+    height:20px;
+    color: #777777;
+    margin-right: 5px;
+}
