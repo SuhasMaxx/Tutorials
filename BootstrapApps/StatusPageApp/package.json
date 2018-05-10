@@ -1,0 +1,18 @@
+{
+  "name": "vmstatus",
+  "version": "1.0.0",
+  "description": "Vm Migration status prototype page",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "serve": "^6.5.3",
+    "uglify-js": "^3.3.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Suhas Sanmukh",
+  "license": "ISC"
+}
