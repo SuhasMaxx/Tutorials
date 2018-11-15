@@ -34,7 +34,19 @@ function myFunction(xhttp) {
   xhttp.responseText;
 }
 
-// ------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------
+
+// -------------------- DISPATCH EVENT FROM IFRAME TO PARENT with Data --------------------
+//in IFrame
+var myCustomData = { foo: 'bar' }
+var event = new CustomEvent('myEvent', { detail: myCustomData })
+window.parent.document.dispatchEvent(event);
+
+// in parent code
+window.document.addEventListener('myEvent', handleEvent, false)
+function handleEvent(e) {
+  console.log(e.detail) // outputs: {foo: 'bar'}
+}
 
 // RegEx to validate email ------------------------------------------------------
 
