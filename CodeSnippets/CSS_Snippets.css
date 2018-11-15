@@ -1,0 +1,16 @@
+/* ALIGN ELEMENTS in CENTER using FLEX */
+
+/* Vertical and horizontal alignment using FLEX. */
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Just horizontal (as long as the main flex axis is horizontal which is default) */
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+}
