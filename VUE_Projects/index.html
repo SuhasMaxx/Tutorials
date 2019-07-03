@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lets Vue it !</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+        <h1>Lets VUE it !!</h1>
+        <div id="app">
+            <div class="text-box" v-for="(product, i) in products" @click="remove(i)">{{ product | blockletter }}</div>
+            <div class="text-box">Code Name : {{code}}</div>
+            <br>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" v-model='code' placeholder="Enter code" aria-label="code" aria-describedby="basic-addon2">
+                <br>
+            </div>
+            <button @click="chekIt" type="button" class="btn btn-primary">Check</button>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+	</body>
+</html>
