@@ -12,15 +12,11 @@ var myApp = new Vue({
     },
     methods:{
         chekIt(){
-            this.products.push("Its a secret service !");
+            this.products.push(this.code);
+            //this.code = "";
         },
         remove(i){
             this.products.splice(i, 1);
         }
     }
-})
-
-
-
-
-//myApp.product.push("Its a secret se@rvice !");
+});
