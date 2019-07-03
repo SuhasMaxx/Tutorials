@@ -1,0 +1,31 @@
+body{
+    font-family: calibri;
+    margin: 0px;
+}
+
+#app{
+    font-size: 12px;
+    font-weight: normal;
+    margin: 10px;
+}
+
+h1{
+    background-color: darkcyan;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.text-box{
+    background-color: chocolate;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.text-box:hover{
+    background-color: brown;
+}
