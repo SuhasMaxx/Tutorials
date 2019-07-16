@@ -19,3 +19,8 @@ function saveFile(filename, data) {
         document.body.removeChild(elem);
     }
 }
+
+
+/* If you have simple string to download. you can create anchor tag in HTML that will download the file when clicked .
+ file name only works in chrome and firefox. In IE it will ask  to open a file named "download" without extension */
+<a download="sample.txt" href='data:application/octet-stream,Sampletextdata'>Click to Donlwoad file</a>
