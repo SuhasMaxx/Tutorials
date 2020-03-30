@@ -5,13 +5,18 @@
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffd7d7;
+  text-align: center;
+  color: #920200;
 }
 
 .flippable-card {
   background-color: transparent;
   width: 300px;
-  height: 300px;
+  height: 430px;
   perspective: 1000px;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 .flippable-card-inner {
@@ -28,10 +33,6 @@ body {
   transform: rotateY(180deg);
 }
 
-.flippable-card.hover-back-class .flippable-card-inner {
-  transform: rotateY(180deg);
-}
-
 .flippable-card-front, .flippable-card-back {
   position: absolute;
   width: 100%;
@@ -41,41 +42,61 @@ body {
 }
 
 .flippable-card-front {
-  background-color: #bbb;
   color: black;
+  border-radius: 5px;
 }
 
 .flippable-card-back {
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
+  border-radius: 5px;
+}
+
+img.card-back{
+  width:300px;
+  height:430px;
+  border-radius: 5px;;
 }
 
 .wrong-card .flippable-card-back{
-    background-color:red;
+  background-color:red;
 }
 
 p.card-number{
-    font-size: 6rem;
-    font-weight: bold;
+  font-size: 8rem;
+  font-weight: bold;
 }
+
+footer{
+  position: absolute;
+  bottom: 0;
+  font-size: 0.7rem;
+  padding: 3px;
+  text-align: center;
+  color: rgb(53, 53, 53);
+  width: 100%;
+}
+
 </style>
 </head>
 <body>
 
-<h1>Card Flip with Text</h1>
-<h3>Hover over the image below:</h3>
+<h1>Flip a Card!</h1>
+<h4>Click on the card to flip</h4>
 
 <div class="flippable-card" onclick="flipcard()">
   <div class="flippable-card-inner">
     <div class="flippable-card-front">
-      <img src="http://3.125.116.112:8080/game/assets/images/card_background.jpg" alt="Avatar" style="width:300px;height:300px;">
+      <img src="CardBack.jpg" alt="Avatar" class="card-back">
     </div>
     <div class="flippable-card-back">
       <p class="card-number">4</p>
     </div>
   </div>
 </div>
+
+<footer> &copy; Suhas Sanmukh (https://github.com/SuhasMaxx)</footer>
 <script>
 
 function flipcard(){
