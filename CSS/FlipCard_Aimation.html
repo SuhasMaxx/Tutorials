@@ -59,7 +59,6 @@ p.card-number{
     font-size: 6rem;
     font-weight: bold;
 }
-}
 </style>
 </head>
 <body>
@@ -86,7 +85,11 @@ if(card.classList.contains('opened')){
     card.classList.remove('opened');
 } else {
     card.classList.add('opened');
-    card.classList.add('wrong-card');
+    if(card.classList.contains('wrong-card')){
+        card.classList.remove('wrong-card');
+    } else {
+        card.classList.add('wrong-card');
+    }
 }
 }
 </script>
