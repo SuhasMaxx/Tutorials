@@ -5,7 +5,7 @@
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ffd7d7;
+  background-color: #f1beb4;
   text-align: center;
   color: #920200;
 }
@@ -17,6 +17,7 @@ body {
   perspective: 1000px;
   border-radius: 5px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .flippable-card-inner {
@@ -59,7 +60,7 @@ img.card-back{
   border-radius: 5px;;
 }
 
-.wrong-card .flippable-card-back{
+.red-card .flippable-card-back{
   background-color:red;
 }
 
@@ -84,7 +85,7 @@ footer{
 
 <h1>Flip a Card!</h1>
 <h4>Click on the card to flip</h4>
-
+<br>
 <div class="flippable-card" onclick="flipcard()">
   <div class="flippable-card-inner">
     <div class="flippable-card-front">
@@ -102,15 +103,17 @@ footer{
 function flipcard(){
 console.log(document.querySelector('.flippable-card'));
 var card = document.querySelector('.flippable-card');
+var cardText = document.querySelector('.card-number');
 if(card.classList.contains('opened')){
     card.classList.remove('opened');
 } else {
-    card.classList.add('opened');
-    if(card.classList.contains('wrong-card')){
-        card.classList.remove('wrong-card');
-    } else {
-        card.classList.add('wrong-card');
-    }
+  cardText.innerHTML = Math.floor(Math.random() * 10) + 1;
+  card.classList.add('opened');
+  if(card.classList.contains('red-card')){
+    card.classList.remove('red-card');
+  } else {
+    card.classList.add('red-card');
+  }
 }
 }
 </script>
