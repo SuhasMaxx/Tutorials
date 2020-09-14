@@ -12,7 +12,8 @@ app.use(bodyParser.urlencoded({extended : false}));
 // Go to mlab.com and create a free account. Then create a database and generate connection URL for it. Then add user for that Database and replace <username> and <pasword> by that user credentials
 // Use that URL in the dbUrl variable
 //for example below is my own generated URL, username is user and password is user; 
-var dbUrl = 'mongodb://user:user@ds245548.mlab.com:45548/learning-node'; //TODO : Put your own DB url here
+// OLD mLabDB >> var dbUrl = 'mongodb://user:user@ds245548.mlab.com:45548/learning-node'; 
+var dbUrl = 'mongodb+srv://user:user@learning-node.wjwhc.mongodb.net/learning-node?retryWrites=true&w=majority'; //TODO : Put your own DB url here
 
 /*Lete create Model for Mongo DB - Mongoose provides modeling for mongoDB*/
 var Message = mongoose.model('Message',{
